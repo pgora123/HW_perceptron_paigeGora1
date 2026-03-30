@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Perceptron T vs L</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    #grid {
+      display: grid;
+      grid-template-columns: repeat(3, 70px);
+      grid-template-rows: repeat(3, 70px);
+      gap: 5px;
+      justify-content: center;
+      margin: 20px auto;
+    }
+
+    .cell {
+      width: 70px;
+      height: 70px;
+      border: 2px solid black;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    .on {
+      background-color: black;
+    }
+
+    button {
+      margin: 8px;
+      padding: 10px 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #result {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    #weights {
+      margin-top: 15px;
+      font-size: 14px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>T vs L</h1>
+  <p>draw a T or an L.</p>
+
+  <div id="grid"></div>
+
+  <button onclick="clearGrid()">Clear</button>
+  <button onclick="predictShape()">Predict</button>
+  <button onclick="trainModel()">Train Model</button>
+
+  <div id="result">Result will show here</div>
+  <div id="weights"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
